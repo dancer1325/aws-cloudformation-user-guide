@@ -1,11 +1,23 @@
 # Setting up VPC endpoints for AWS CloudFormation<a name="cfn-vpce-bucketnames"></a>
 
-You can improve the security posture of your VPC by configuring AWS CloudFormation to use an interface VPC endpoint\. Interface endpoints are powered by PrivateLink, a technology that enables you to privately access CloudFormation APIs by using private IP addresses\. PrivateLink restricts all network traffic between your VPC and CloudFormation to the Amazon network\. Also, you don't need an Internet gateway, a NAT device, or a virtual private gateway\.
-
-You aren't required to configure PrivateLink, but it's recommended\. For more information about PrivateLink and VPC endpoints, see [Accessing AWS services through PrivateLink](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Introduction.html#what-is-privatelink)\.
+ * interface VPC endpoint
+   * allows
+     * improve the security posture of your VPC -- via configuring -- AWS CloudFormation 
+   * -- powered by -- PrivateLink
+     * == technology / enables you -- via private IP addresses, to access -- CloudFormation APIs 
+       * 👀ALL network traffic between your VPC -- & -- CloudFormation / restricted | Amazon network 👀 
+       * NOT need
+         * Internet gateway,
+         * NAT device,
+         * virtual private gateway
+     * PrivateLink configuration
+       * NOT required
+       * recommended
+     * see [Accessing AWS services through PrivateLink](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Introduction.html#what-is-privatelink)
 
 ## Before you begin<a name="cfn-setting-up-vpc-considerations"></a>
 
+* TODO:
 Before you configure VPC endpoints for CloudFormation, be aware of the following considerations\.
 + When using the VPC endpoint feature, grant access to CloudFormation\-specific S3 buckets for resources in a VPC that must respond to a custom resource request or a wait condition\.
 
