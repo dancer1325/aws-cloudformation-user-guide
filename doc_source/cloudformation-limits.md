@@ -1,7 +1,10 @@
 # AWS CloudFormation quotas<a name="cloudformation-limits"></a>
-
-Your AWS account has AWS CloudFormation quotas that you might need to know when authoring templates and creating stacks\. By understanding these quotas, you can avoid limitation errors that would require you to redesign your templates or stacks\.
-
+ 
+* == limitation / -> errors
+* -- come from -- your AWS account
+* uses
+  * authoring templates
+  * creating stacks
 
 **AWS CloudFormation quotas**  
 
@@ -41,16 +44,23 @@ Your AWS account has AWS CloudFormation quotas that you might need to know when 
 
 ## Feature availability<a name="stacksets-availability"></a>
 
-Not all features of CloudFormation may be available in every Region\. For more information about AWS Regions, see [Global infrastructure Region table](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/)\.
-+ [Macros](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html) are currently not available in the following Region:
-  + Asia Pacific \(Jakarta\)
-+ [Drift detection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html) is currently not available in the following Region:
-  + Asia Pacific \(Osaka\)
-+ [Performing ECS blue/green deployments through CodeDeploy using AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/blue-green.html) is currently not available in the following Regions:
-  + Africa \(Cape Town\)
-  + Asia Pacific \(Osaka\)
-  + Europe \(Milan\)
+* NOT ALL features of CloudFormation -- may be -- available | EACH Region
+  * see [Global infrastructure Region table](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/)
+  + [Macros](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html)
+    + NOT available |
+      + Asia Pacific \(Jakarta\)
+  + [Drift detection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html)
+    + NOT available |
+      + Asia Pacific \(Osaka\)
+  + [ECS blue/green deployments -- through -- CodeDeploy / -- using -- AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/blue-green.html)
+    + NOT available |
+      + Africa \(Cape Town\)
+      + Asia Pacific \(Osaka\)
+      + Europe \(Milan\)
 
 ## StackSets and macros<a name="stacksets-macros"></a>
 
-StackSets does not currently support creating or updating stack sets with service\-managed permissions from templates that contain macros\. This includes transforms, which are macros hosted by AWS CloudFormation\. For more information about macros, see [Template macros](template-macros.md)\.
+* 👀if templates / contain macros -> StackSets can NOT create or update stack sets 👀 
+* transforms
+  * == macros / -- hosted by -- AWS CloudFormation
+  * see [Template macros](template-macros.md)
